@@ -1,0 +1,23 @@
+Bài 9: Thiết Kế Không Gian Đa Profile Và Kiến Trúc Bookmark Cho Trạm Khám Bệnh
+*Vấn đề: - Xung đột phiên đăng nhập
+         - Lộ lọt riêng tư
+         - Rác thanh Bookmark
+*Yêu cầu: Phần 1: Báo cáo phân tích kiến trúc đa Profile
+          Phần 2: Thiết kế hệ thống Bookmark & Quy trình an toàn
+*Cách giải quyết:
+- Phần 1: phân tích
++ dùng chung 1 profile gây ghi đè user data và cookies -> văng phiên bản
++ 3 profile: work ( khám bệnh );personal( cá nhân );sandbox/test ( thực tập ) 
+-phần 2: giải pháp
++ tạo 3 thư mục và nhưng web cần lưu:
+📁 01_CarePulse_Clinic:  - phần mềm kê đơn chính
+                         - quản lý bệnh nhân nội trú/ngoại trú
+                         - hệ thống hội chẩn trực tuyến
+📁 02_Pharma_Porta:       - tra cứu dược thư quốc gia việt nam
+                           - danh mục thuốc bộ y tế
+                           - cổng thông tin giá thuốc quốc gia
+📁 03_Medical_Tools:      - tra cứu phân loại bệnh icd-10
+                           - google dịch y tế chuyên ngành
+                           - công cụ tính liều lượng thuốc
++ favicon-only: edit bookmark, xóa sạch tên, giữ lại biểu tượng.
++ dùng profile khách ; tuyệt đối không bật cloud sync trên máy dùng chung.
